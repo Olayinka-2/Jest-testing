@@ -7,8 +7,13 @@ function capitalize(word) {
    return firstLetter + string.slice(1);
 }
 
-console.log(capitalize("man"));
+function reverseString(string) {
+   return string.split("").reverse().join("");
+}
+
+console.log(reverseString("Sttr"));
 
 module.exports = {
-   capitalize
+   capitalize,
+   reverseString
 };
