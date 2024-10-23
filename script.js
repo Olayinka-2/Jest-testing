@@ -11,9 +11,28 @@ function reverseString(string) {
    return string.split("").reverse().join("");
 }
 
+function add(a,b) {
+   return a + b;
+}
+
+function subtract(a,b) {
+   return a - b;
+}
+
+function multiply(a, b) {
+   return a * b;
+}
+
+function divide(a,b) {
+   return a / b;
+}
 console.log(reverseString("Sttr"));
 
 module.exports = {
    capitalize,
-   reverseString
+   reverseString,
+   add,
+   subtract,
+   multiply,
+   divide,
 };
