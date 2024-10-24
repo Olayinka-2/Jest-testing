@@ -26,7 +26,27 @@ function multiply(a, b) {
 function divide(a,b) {
    return a / b;
 }
-console.log(reverseString("Sttr"));
+
+function caesarCipher(word, shift) {
+   let finalArr = [];
+
+   for (let letter of word) {
+      if (/[A-Z]/.test(letter)) { // Uppercase letters
+         let shiftedCharCode = ((letter.charCodeAt(0) - 65 + shift) % 26 + 26) % 26 + 65;
+         finalArr.push(String.fromCharCode(shiftedCharCode));
+      } else if (/[a-z]/.test(letter)) { // Lowercase letters
+         let shiftedCharCode = ((letter.charCodeAt(0) - 97 + shift) % 26 + 26) % 26 + 97;
+         finalArr.push(String.fromCharCode(shiftedCharCode));
+      } else { // Non-alphabetic characters remain unchanged
+         finalArr.push(letter);
+      }
+   }
+   
+   return finalArr.join("");
+}
+
+// console.log(reverseString("Sttr"));
+// console.log(caesarCipher("ABC", 3));
 
 module.exports = {
    capitalize,
@@ -35,4 +55,5 @@ module.exports = {
    subtract,
    multiply,
    divide,
+   caesarCipher
 };

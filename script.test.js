@@ -40,4 +40,10 @@ describe('Calculator', () => {
    test("2 / 2 is equal 1", () => {
       expect(utils.divide(2,2)).toBe(1);
    });
+});
+
+describe('Caesar CIpher', () => {
+   test('ABC', () => {
+      expect(utils.caesarCipher("ABC", 3)).toBe("DEF");
+   });
 })
