@@ -45,6 +45,33 @@ function caesarCipher(word, shift) {
    return finalArr.join("");
 }
 
+function analyzeArray(array) {
+
+   let length = array.length;
+   let average = Math.floor(array.reduce((accumulation, current) => {
+      return accumulation + current
+   }, 0) / length );
+   let min = Math.min(...array);
+   let max = Math.max(...array);
+
+   return {
+      average,
+      max,
+      min,
+      length
+   }
+   
+}
+const object = analyzeArray([1,8,3,4,2,6]);
+console.log(object);
+
+// object == {
+//    average: 4,
+//    min: 1,
+//    max: 8,
+//    length: 6
+// };
+
 // console.log(reverseString("Sttr"));
 // console.log(caesarCipher("ABC", 3));
 
@@ -55,5 +82,6 @@ module.exports = {
    subtract,
    multiply,
    divide,
-   caesarCipher
+   caesarCipher,
+   analyzeArray
 };

@@ -46,4 +46,15 @@ describe('Caesar CIpher', () => {
    test('ABC', () => {
       expect(utils.caesarCipher("ABC", 3)).toBe("DEF");
    });
+});
+
+describe('Analyze Array', () => {
+   test('Array should return an object with avarage, min, max and length', () => {
+      expect(utils.analyzeArray([1,8,3,4,2,6])).toEqual({
+         average: 4,
+         min: 1,
+         max: 8,
+         length: 6
+      })
+   })
 })
